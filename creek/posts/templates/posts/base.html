@@ -1,0 +1,181 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--  
+    Document Title
+    =============================================
+    -->
+    <title>The BL Project | Data Decision Platform</title>
+    <!--  
+    Favicons
+    =============================================
+    -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicons/favicon-16x16.png' %}">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{% static 'images/favicons/ms-icon-144x144.png' %}">
+    <meta name="theme-color" content="#ffffff">
+    <!--  
+    Stylesheets
+    =============================================
+    
+    -->
+    <!-- Default stylesheets-->
+    {% block css %}
+    <link href="{% static 'lib/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Template specific stylesheets-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="{% static 'lib/animate.css/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/components-font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/et-line-font/et-line-font.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/flexslider/flexslider.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owl.carousel/dist/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owl.carousel/dist/assets/owl.theme.default.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/magnific-popup/dist/magnific-popup.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/simple-text-rotator/simpletextrotator.css' %}" rel="stylesheet">
+    <!-- Main stylesheet and color file-->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link id="color-scheme" href="{% static 'css/colors/default.css' %}" rel="stylesheet">
+
+    {% endblock %}
+  </head>
+  <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+    <main>
+      <nav class="navbar navbar-custom navbar-fixed-top bg-dark" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <br/>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="{% url 'posts:home' %}">The BL Project</a>
+          </div>
+          <div class="collapse navbar-collapse" id="custom-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <br/>
+              <li class="dropdown"><a href="{% url 'posts:home' %}">Home</a>
+              <li class="dropdown"><a href="#">Innovations</a>
+              <li class="dropdown"><a href="{% url 'posts:coming' %}">Apps</a>
+              <li class="dropdown"><a href="{% url 'posts:about' %}">About BL</a>
+                {% if user.is_authenticated %}
+              <li class="dropdown"><a href="{% url 'logout' %}">Log Out</a>
+              <li class="dropdown"><a href="{% url 'profile' %}">Profile</a>
+                {% else %}
+              <li class="dropdown"><a href="{% url 'login' %}">log In</a>
+              <li class="dropdown"><button class="btn btn-danger btn-circle"><a href="{% url 'register' %}">Register</a></button>
+                {% endif %}
+              <li class="collapse navbar-collapse" id="navbarCollapse">
+      </div>
+    </ul>
+  </div>
+  </div>
+</nav>
+<br/>
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+      {% block content %}
+      
+      {% endblock %}
+        <div class="module-small bg-dark"> 
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">About The BL Project</h5>
+                  <p>We are there to create innovative applications and improve security for your business</p>
+                  <p>Phone: +1 432 305-6108</p>
+                  <p>Email:<a href="#">bandini@theblproject.com</a></p>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">Recent Comments</h5>
+                  <ul class="icon-list">
+                    <li>Lawrence Mainja on <a href="#">Docker</a></li>
+                    <li>Arturo Bandini on <a href="#">Elasticsearch</a></li>
+                    <li>Henry Chinaski on <a href="#">Django</a></li>
+                    <li>Dexter Morgan on <a href="#">Postgres</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">Blog Categories</h5>
+                  <ul class="icon-list">
+                    <li><a href="#">Apps - 7</a></li>
+                    <li><a href="#">Code fixes - 3</a></li>
+                    <li><a href="#">ELK - 12</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">Popular Posts</h5>
+                  <ul class="widget-posts">
+                    <li class="clearfix">
+                      <div class="widget-posts-image"><a href="#"><img src="{% static 'images/rp-1.jpg' %}" alt="Post Thumbnail"/></a></div>
+                      <div class="widget-posts-body">
+                        <div class="widget-posts-title"><a href="#">Installing the ELK stack on Windows Server</a></div>
+                        <div class="widget-posts-meta">23 january</div>
+                      </div>
+                    </li>
+                    <li class="clearfix">
+                      <div class="widget-posts-image"><a href="#"><img src="{% static 'images/rp-2.jpg' %}" alt="Post Thumbnail"/></a></div>
+                      <div class="widget-posts-body">
+                        <div class="widget-posts-title"><a href="#">Realistic Business Card Mockup</a></div>
+                        <div class="widget-posts-meta">15 February</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="divider-d">
+        <footer class="footer bg-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <p class="copyright font-alt">&copy; 2018&nbsp;<a href="{% url 'posts:about' %}">The BL Project</a>, All Rights Reserved</p>
+              </div>
+              <div class="col-sm-6">
+                <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
+    </main>
+    <!--  
+    JavaScripts
+    =============================================
+    -->
+    {% block JavaScripts %}
+    <script src="{% static 'lib/jquery/dist/jquery.js' %}"></script>
+    <script src="{% static 'lib/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'lib/wow/dist/wow.js' %}"></script>
+    <script src="{% static 'lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js' %}"></script>
+    <script src="{% static 'lib/isotope/dist/isotope.pkgd.js' %}"></script>
+    <script src="{% static 'lib/imagesloaded/imagesloaded.pkgd.js' %}"></script>
+    <script src="{% static 'lib/flexslider/jquery.flexslider.js' %}"></script>
+    <script src="{% static 'lib/owl.carousel/dist/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/smoothscroll.js' %}"></script>
+    <script src="{% static 'lib/magnific-popup/dist/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static 'lib/simple-text-rotator/jquery.simple-text-rotator.min.js' %}"></script>
+    <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK2Axt8xiFYMBMDwwG1XzBQvEbYpzCvFU"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    {% endblock %}
+  </body>
+</html>

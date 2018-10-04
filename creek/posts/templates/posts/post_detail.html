@@ -1,0 +1,48 @@
+{% extends "posts/base.html" %}
+{% load static %}
+{% block content %}
+  <div class="main">
+        <section class="module-small">
+          <div class="container">
+            <div class="row">
+                <div class="post">
+                  <div class="post-header font-alt">
+                    <h1 class="post-title">{{ post.title }}</h1>
+                    <div class="post-meta">By&nbsp;<a href="#">{{ post.author }}</a>| {{ post.date_posted|date:"F d, Y" }} | 3 Comments | <a href="#">Photography, </a><a href="#">Web Design</a>
+                    </div>
+                  </div>
+                </div>
+                  {% if object.author == user %}
+                  <div>
+                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'posts:post-update' object.id %}">Update</a>
+                    <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'posts:post-delete' object.id %}">Delete</a>
+                  </div>
+                {% endif %}
+                  <div class="post-entry">
+                    <h5>{{ post.content|linebreaks }}<h5/>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            {% for comment in post.comments.all %}
+                <div class="comments">
+                <a class="btn btn-default" href="{% url 'posts:comment' pk=post.pk %}">Add Comment</a>
+                  <h4 class="comment-title font-alt">There are 3 comments</h4>
+                  <div class="comment clearfix">
+                    <div class="comment-avatar"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/ryanbattles/128.jpg" alt="avatar"/></div>
+                    <div class="comment-content clearfix">
+                      <div class="comment-author font-alt"><a href="#">{{ comment.creator }}</a></div>
+                      <div class="comment-body">
+                        <p>{{ comment.text|linebreaks }}</p>
+                      </div>
+                      <div class="comment-meta font-alt">{{ comment.created_date|date:"F d, Y" }}<a href="#">Reply</a>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                {% endfor %}
+{% endblock content %}
