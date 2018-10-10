@@ -28,7 +28,7 @@
             {% for comment in post.comments.all %}
                 <div class="comments">
                 <a class="btn btn-default" href="{% url 'posts:comment' pk=post.pk %}">Add Comment</a>
-                  <h4 class="comment-title font-alt">There are 3 comments</h4>
+                  <h4 class="comment-title font-alt"></h4>
                   <div class="comment clearfix">
                     <div class="comment-avatar"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/ryanbattles/128.jpg" alt="avatar"/></div>
                     <div class="comment-content clearfix">

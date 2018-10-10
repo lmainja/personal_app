@@ -14,10 +14,10 @@
     Favicons
     =============================================
     -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicons/favicon-16x16.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/icon.jpg' %}">
     <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="{% static 'images/favicons/ms-icon-144x144.png' %}">
+    <meta name="msapplication-TileImage" content="{% static 'images/icon.jpg' %}">
     <meta name="theme-color" content="#ffffff">
     <!--  
     Stylesheets
@@ -57,7 +57,6 @@
             <ul class="nav navbar-nav navbar-right">
               <br/>
               <li class="dropdown"><a href="{% url 'posts:home' %}">Home</a>
-              <li class="dropdown"><a href="#">Innovations</a>
               <li class="dropdown"><a href="{% url 'posts:coming' %}">Apps</a>
               <li class="dropdown"><a href="{% url 'posts:about' %}">About BL</a>
                 {% if user.is_authenticated %}
@@ -93,48 +92,6 @@
                   <p>We are there to create innovative applications and improve security for your business</p>
                   <p>Phone: +1 432 305-6108</p>
                   <p>Email:<a href="#">bandini@theblproject.com</a></p>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="widget">
-                  <h5 class="widget-title font-alt">Recent Comments</h5>
-                  <ul class="icon-list">
-                    <li>Lawrence Mainja on <a href="#">Docker</a></li>
-                    <li>Arturo Bandini on <a href="#">Elasticsearch</a></li>
-                    <li>Henry Chinaski on <a href="#">Django</a></li>
-                    <li>Dexter Morgan on <a href="#">Postgres</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="widget">
-                  <h5 class="widget-title font-alt">Blog Categories</h5>
-                  <ul class="icon-list">
-                    <li><a href="#">Apps - 7</a></li>
-                    <li><a href="#">Code fixes - 3</a></li>
-                    <li><a href="#">ELK - 12</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="widget">
-                  <h5 class="widget-title font-alt">Popular Posts</h5>
-                  <ul class="widget-posts">
-                    <li class="clearfix">
-                      <div class="widget-posts-image"><a href="#"><img src="{% static 'images/rp-1.jpg' %}" alt="Post Thumbnail"/></a></div>
-                      <div class="widget-posts-body">
-                        <div class="widget-posts-title"><a href="#">Installing the ELK stack on Windows Server</a></div>
-                        <div class="widget-posts-meta">23 january</div>
-                      </div>
-                    </li>
-                    <li class="clearfix">
-                      <div class="widget-posts-image"><a href="#"><img src="{% static 'images/rp-2.jpg' %}" alt="Post Thumbnail"/></a></div>
-                      <div class="widget-posts-body">
-                        <div class="widget-posts-title"><a href="#">Realistic Business Card Mockup</a></div>
-                        <div class="widget-posts-meta">15 February</div>
-                      </div>
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>
