@@ -14,7 +14,7 @@
     Favicons
     =============================================
     -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/icon.jpg' %}">
+    <link rel="icon" type="image/jpg" sizes="16x16" href="{% static 'images/icon.jpg' %}">
     <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{% static 'images/icon.jpg' %}">
@@ -51,14 +51,16 @@
         <div class="container">
           <div class="navbar-header">
             <br/>
+          </br>
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="{% url 'posts:home' %}">The BL Project</a>
           </div>
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
               <br/>
+            </br>
               <li class="dropdown"><a href="{% url 'posts:home' %}">Home</a>
               <li class="dropdown"><a href="{% url 'posts:coming' %}">Apps</a>
-              <li class="dropdown"><a href="{% url 'posts:about' %}">About BL</a>
+              <li class="dropdown"><a href="{% url 'posts:about' %}">About TBL</a>
                 {% if user.is_authenticated %}
               <li class="dropdown"><a href="{% url 'logout' %}">Log Out</a>
               <li class="dropdown"><a href="{% url 'profile' %}">Profile</a>
@@ -70,9 +72,8 @@
       </div>
     </ul>
   </div>
-  </div>
+</div>
 </nav>
-<br/>
       {% if messages %}
         {% for message in messages %}
           <div class="alert alert-{{ message.tags }}">

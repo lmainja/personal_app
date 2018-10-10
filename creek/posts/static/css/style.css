@@ -1370,11 +1370,11 @@ General Styles - Owlcarousel
 --------------------------------------------------------------*/
 .home-section {
   position: relative;
-  background-color: rgb(15, 9, 133);
+  background-color: rgba(56, 70, 63, 0.322);
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
-  z-index: 0;
+  z-index: -2;
   background-size: cover;
 }
 
@@ -1708,70 +1708,6 @@ Google map
 }
 
 /*--------------------------------------------------------------
-	Price Table
---------------------------------------------------------------*/
-.price-table {
-  background: #fff;
-  border: 1px solid #eaeaea;
-  padding: 25px 20px;
-  margin: 15px 0 30px;
-  border-radius: 2px;
-  text-align: center;
-}
-
-.price-table:hover {
-  border-color: #CACACA;
-}
-
-.price-table.best {
-  margin: 0 0 30px;
-}
-
-.price-table .small {
-  margin: 0;
-}
-
-.borderline {
-  position: relative;
-  background: #eaeaea;
-  display: block;
-  height: 1px;
-  width: 100%;
-  margin: 20px 0 15px;
-}
-
-.borderline:before {
-  position: absolute;
-  background: #eaeaea;
-  content: "";
-  bottom: -7px;
-  left: 50%;
-  height: 14px;
-  width: 14px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  margin-left: -7px;
-}
-
-.borderline:after {
-  position: absolute;
-  background: #fff;
-  content: "";
-  bottom: -5px;
-  left: 50%;
-  height: 16px;
-  width: 16px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  margin-left: -8px;
-}
-
-
-/*--------------------------------------------------------------
 	Fun fact
 --------------------------------------------------------------*/
 .count-item {
@@ -2003,37 +1939,6 @@ Google map
 
 .request-cta {
   padding: 50px 0px;
-}
-
-/*--------------------------------------------------------------
-	Testimonial
---------------------------------------------------------------*/
-.testimonial:before {
-  background: rgba(2, 2, 2, 0.4);
-}
-
-.testimonials-slider {
-  position: relative;
-}
-
-.testimonial-text {
-  text-align: center;
-  font-style: normal;
-  font-size: 18px;
-}
-
-.testimonial-caption {
-  text-align: center;
-  padding: 10px 0 0;
-}
-
-.testimonial-title {
-  font-size: 14px;
-}
-
-.testimonial-descr {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 11px;
 }
 
 /*--------------------------------------------------------------
@@ -2430,70 +2335,6 @@ Google map
   box-shadow: 0 23px 40px rgba(0, 0, 0, 0.2);
 }
 
-/*--------------------------------------------------------------
-	Documentation Page
---------------------------------------------------------------*/
-.documentation-page {
-  font-size: 14px;
-}
-
-.documentation-page .pln {
-  color: #000;
-}
-
-.documentation-page pre.prettyprint {
-  border: 1px solid #888;
-  padding: 15px;
-}
-
-.documentation-page ol.linenums {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.documentation-page li.L0, .documentation-page li.L1, .documentation-page li.L2, .documentation-page li.L3, .documentation-page li.L5, .documentation-page li.L6, .documentation-page li.L7, .documentation-page li.L8 {
-  list-style-type: none;
-}
-
-.documentation-page li.L1, .documentation-page li.L3, .documentation-page li.L5, .documentation-page li.L7, .documentation-page li.L9 {
-  background: #eee;
-}
-
-.documentation-page .com {
-  color: #800;
-}
-
-.documentation-page .lit {
-  color: #066;
-}
-
-.documentation-page .pun, .documentation-page .opn, .documentation-page .clo {
-  color: #660;
-}
-
-.documentation-page .fun {
-  color: red;
-}
-
-.documentation-page .str, .documentation-page .atv {
-  color: #080;
-}
-
-.documentation-page .kwd, .documentation-page .tag {
-  color: #008;
-}
-
-.documentation-page .typ, .documentation-page .atn, .documentation-page .dec, .documentation-page .var {
-  color: #606;
-}
-
-.documentation-page a {
-  color: #19B5FE;
-}
-
-.documentation-page a:hover {
-  color: #1C92C9;
-}
 
 /*--------------------------------------------------------------
 	Responsive Styles - Media Queries
