@@ -2,18 +2,21 @@
 {% load static %}
 {% block content %}
  {% for post in posts %}
+</br>
+  </br>
           <section class="container">
             <div class="row">
               <div class="col-sm-8">
                 <div class="row multi-columns-row post-columns">
                     <div class="post">
                       <div class="post-header font-alt">
-                        <h2 class="post-title"><a href="{% url 'posts:post-detail' post.id %}">{{ post.title }}</a></h2>
-                        <div class="post-meta"> <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}"> By&nbsp;<a href="#">{{post.author}}</a>&nbsp;| {{ post.date_posted }}
-                        </div>
-                      </div>
-                      <div class="post-entry">
-                        <h5><strong>{{ post.content|truncatewords:50 }}</h5></strong>
+                          <div class="media-body">
+                              <div class="article-metadata">
+                                <h2 class="post-title"><a href="{% url 'posts:post-detail' post.id %}">{{ post.title }}</a></h2>
+                                <div class="post-meta"> <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}"> By&nbsp;<a href="#">{{post.author}}</a>&nbsp;| {{ post.date_posted }}
+                              </div>
+                            </div>
+                      <div class="article-content"> <h4><strong>{{ post.content|truncatewords:50 }}</h4></strong>
                       </div>
                       <div class="post-more"><a class="more-link" href="{% url 'posts:post-detail' post.id %}">Read more</a></div>
                     </div>
