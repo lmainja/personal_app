@@ -1,8 +1,10 @@
 {% extends 'posts/base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <div class="content-section">
-        <div class="bg-light-30 bg-light">
+<section class="module">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
             <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
@@ -20,4 +22,6 @@
         </div>
     </div>
 </div>
+</div>
+</section>
     {% endblock %}
