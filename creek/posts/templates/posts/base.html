@@ -60,6 +60,7 @@
             </br>
               <li class="dropdown"><a href="{% url 'posts:home' %}">Home</a>
               <li class="dropdown"><a href="{% url 'posts:coming' %}">Apps</a>
+              <li class="dropdown"><a href="{% url 'posts:coming' %}">Portfolio</a>
               <li class="dropdown"><a href="{% url 'posts:about' %}">About TBL</a>
                 {% if user.is_authenticated %}
               <li class="dropdown"><a href="{% url 'logout' %}">Log Out</a>
