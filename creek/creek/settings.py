@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     #third party apps
     'crispy_forms',
     'tinymce',
+    'reset_migrations',
     #'django_elasticsearch_dsl',
 
     #created apps

@@ -11,7 +11,7 @@ django-crispy-forms==1.7.2
 django-jenkins==0.110.0
 django-js-asset==1.1.0
 django-pkgconf==0.3.0
-django-tinymce==2.7.0
+django-tinymce4-lite==1.7.3
 gunicorn==19.9.0
 idna==2.7
 ipaddress==1.0.22
