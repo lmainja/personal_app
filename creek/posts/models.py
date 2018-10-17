@@ -4,10 +4,11 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from django.utils import timezone
 from django.conf import settings
+from tinymce import HTMLField
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
-    content = models.TextField(null=True) 
+    content = HTMLField('Content', null=True) 
     date_posted = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(null=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='posts')

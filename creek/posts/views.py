@@ -3,7 +3,6 @@ from .models import Post, Comment
 from django.views.generic import ListView, DetailView, TemplateView, UpdateView, DeleteView, CreateView, View
 from django.shortcuts import get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from .forms import CommentForm
 
 def home(request):
     context = {
@@ -73,16 +72,4 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
             return True
         return False
 
-def add_comment(request, pk):
-    if request.method == "POST":
-            form = CommentForm(request.POST)
-            post = get_object_or_404(Post, pk=pk)
-            if form.is_valid():
-                comment = form.save(commit=False)
-                comment.post = post
-                comment.save()
-                return redirect('posts:detail', pk=post.pk)
-    else:
-        form = CommentForm()
-    return render(request, 'posts/comments.html', {'form': form})
 

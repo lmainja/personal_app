@@ -21,7 +21,7 @@ from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
 from controlcenter.views import controlcenter
-
+from tinymce import HTMLField
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,6 +32,7 @@ urlpatterns = [
     #path('accounts/', include('allauth.urls')),
     path('users/', include('users.urls')),
     path('', include('posts.urls')),
+    path('tinymce/', include('tinymce.urls')),
 ]
 
 if settings.DEBUG:
