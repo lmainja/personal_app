@@ -933,32 +933,6 @@ blockquote {
   margin-top: -35px;
 }
 
-/* Restaurant module header */
-.alt-module-subtitle {
-  display: table;
-}
-
-.alt-module-subtitle h5 {
-  display: table-cell;
-  white-space: pre;
-  padding: 0 8px;
-  color: #111;
-}
-
-/* Finance case study header */
-.finance-image-content {
-  border: 1px solid #e5e5e5;
-  padding: 60px 0px;
-}
-
-.finance-image-content .module-title {
-  margin-bottom: 20px;
-}
-
-.finance-image-content .alt-features-item {
-  margin-top: 40px;
-}
-
 /* Landing Page */
 .landing-reason .module-title {
   color: #e6af4b;
@@ -1117,27 +1091,6 @@ Hero Slider
   text-align: center;
 }
 
-/*
-Photography Page Slider
-*/
-.photography-page .image-caption {
-  bottom: 20px;
-  position: absolute;
-  width: 35%;
-}
-
-.photography-page .image-caption .caption-text {
-  font-size: 24px;
-  text-transform: none;
-  letter-spacing: 1px;
-}
-
-.photography-page .flex-control-nav {
-  left: 80%;
-  bottom: 20px;
-  z-index: 11;
-}
-
 /* -------------------------------------------------------------------
 General Styles - Owlcarousel
 ------------------------------------------------------------------- */
@@ -1255,7 +1208,7 @@ General Styles - Owlcarousel
 }
 
 .navbar-custom .dropdown-menu {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(12, 49, 4, 0.9);
   border-radius: 0;
   border: 0;
   padding: 0;
