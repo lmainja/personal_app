@@ -211,3 +211,14 @@ TINYMCE_DEFAULT_CONFIG = {
     'statusbar': True,
     }
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+
+EMAIL_HOST_USER = 'apikey'
+
+EMAIL_HOST_PASSWORD = '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'
+
+EMAIL_PORT = 587
+
+EMAIL_USE_TLS = True
