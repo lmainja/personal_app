@@ -4,6 +4,9 @@ from django.views import generic
 from django.contrib import messages
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib.auth.decorators import login_required
+from django.core.mail import send_mail
+from django.conf import settings
+from django.template.loader import get_template
 
 def register(request):
     if request.method == 'POST':
@@ -37,3 +40,21 @@ def profile(request):
         'p_form': p_form
     }
     return render(request, 'users/profile.html')
+
+def contact_view(request):
+    if request.method == "POST":
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        message = request.POST.get("message")
+
+        subject = 'Contact Form Received'
+        from_email = settings.DEFAULT_FROM_EMAIL
+        from_email = [settings.DEFAULT_GET_EMAIL]
+
+        context = {
+            'user': name,
+            'email':email,
+            'message': message
+        }
+
+        contact_message = get_template('contact_message.txt').render(context)
