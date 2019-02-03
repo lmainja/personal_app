@@ -104,20 +104,14 @@
                   </li>
                 </ul>
               <li class="dropdown"><a href="{% url 'posts:coming' %}">Portfolio</a>
-              <li class="dropdown"><a href="{% url 'posts:home' %}">Blog</a>
-              <li class="dropdown"><a href="{% url 'posts:about' %}">About</a>
+              <li class="dropdown"><a href="{% url 'posts:home' %}">Pricing</a>
+              <li class="dropdown"><a href="{% url 'posts:about' %}">Who We Are</a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Team</a></li>
                   <li><a href="#">Careers</a></li>
                 </ul>
               </li>
-                {% if user.is_authenticated %}
-              <li class="dropdown"><a href="{% url 'logout' %}">Log Out</a>
-              <li class="dropdown"><a href="{% url 'profile' %}">Profile</a>
-                {% else %}
-              <li class="dropdown"><a href="{% url 'login' %}">log In</a>
-              <li class="dropdown"><button class="btn btn-danger btn-circle"><a href="{% url 'register' %}">Contact Us</a></button>
-                {% endif %}
+              <li class="dropdown"><button class="btn btn-danger btn-circle"><a href="#">Contact Us</a></button>
               <li class="collapse navbar-collapse" id="navbarCollapse">
       </div>
     </ul>
