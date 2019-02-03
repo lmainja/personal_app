@@ -58,16 +58,54 @@
             <ul class="nav navbar-nav navbar-right">
               <br/>
             </br>
-              <li class="dropdown"><a href="{% url 'posts:home' %}">Home</a>
-              <li class="dropdown"><a href="{% url 'posts:coming' %}">Apps</a>
+              <li class="dropdown"><a href="{% url 'posts:about' %}">Home</a>
+                <ul class="dropdown-menu">
+                  <li><a href="{% # %}">BL Innovations</a></li>
+                  <li><a href="{% # %}">LK Writers</a></li>
+                </ul>
+              <li class="dropdown"><a href="{% url 'posts:about' %}">About</a>
+              <li class="dropdown"><a href="#">Services</a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">App Development</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="{% # %}">Web Apps</a></li>
+                      <li><a href="{% # %}">Mobile Apps</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Graphic Design</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="{% # %}">Interface</a></li>
+                      <li><a href="{% # %}">Advertising</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">SEM</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="{% # %}">SEO</a></li>
+                      <li><a href="{% # %}">E-Marketing</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Data Solutions</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="{% # %}">Management</a></li>
+                      <li><a href="{% # %}">Analysis</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Security</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="{% # %}">Risk</a></li>
+                      <li><a href="{% # %}">App Security</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              <li class="dropdown"><a href="{% url 'posts:coming' %}">Portfolio</a>
               <li class="dropdown"><a href="#">Portfolio</a>
-              <li class="dropdown"><a href="{% url 'posts:about' %}">About TBL</a>
+              <li class="dropdown"><a href="{% url 'posts:home' %}">Blog</a>
                 {% if user.is_authenticated %}
               <li class="dropdown"><a href="{% url 'logout' %}">Log Out</a>
               <li class="dropdown"><a href="{% url 'profile' %}">Profile</a>
                 {% else %}
               <li class="dropdown"><a href="{% url 'login' %}">log In</a>
-              <li class="dropdown"><button class="btn btn-danger btn-circle"><a href="{% url 'register' %}">Register</a></button>
+              <li class="dropdown"><button class="btn btn-danger btn-circle"><a href="{% url 'register' %}">Contact Us</a></button>
                 {% endif %}
               <li class="collapse navbar-collapse" id="navbarCollapse">
       </div>
@@ -92,7 +130,7 @@
               <div class="col-sm-9">
                 <div class="widget">
                   <h5 class="widget-title font-alt">About The BL Project</h5>
-                  <p>We create innovative, responsive and highly scalable applications. We also work to improve and enhance security of your applications and data.</p>
+                  <p>We create innovative, responsive and highly scalable applications. We also work to improve and enhance security of your applications and data. Our graphic design team work around the clock to create innovative design that satisfy out customers. We simplify technology, so you don't have to worry about IT complexities.</p>
                   <p>Phone: +1 432 305-6108</p>
                   <p>Email:<a href="#">admin@theblproject.com</a></p>
                 </div>
@@ -105,7 +143,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6">
-                <p class="copyright font-alt">&copy; 2018&nbsp;<a href="{% url 'posts:about' %}">Designed by Lawrence Mainja for <strong>The BL Project</strong></a>, All Rights Reserved</p>
+                <p class="copyright font-alt">&copy; 2019&nbsp;<a href="{% url 'posts:about' %}">Designed by Lawrence Mainja for <strong>The BL Project</strong></a>, All Rights Reserved</p>
               </div>
               <div class="col-sm-6">
                 <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>
