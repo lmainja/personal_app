@@ -17,6 +17,9 @@ def about(request):
 def coming_soon(request):
     return render(request, 'posts/coming_soon.html')
 
+def pricing(request):
+    return render(request, 'posts/pricing.html')
+
 class PostDetailView(DetailView):
     model = Post
     context_object_name = 'post'
