@@ -648,7 +648,7 @@ a,
 --------------------------------------------------------------*/
 .btn {
   border-radius: 0;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Fahkwang", sans-serif;
   text-transform: none;
   letter-spacing: 2px;
   font-size: 11px;
@@ -812,7 +812,7 @@ a,
 
 /* Forms common style */
 .form-control {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Fahkwang", sans-serif;
   text-transform: none;
   letter-spacing: 2px;
   font-size: 11px;
@@ -888,13 +888,13 @@ blockquote {
 }
 
 .font-alt {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Poppins", sans-serif;
   text-transform: none;
   letter-spacing: 2px;
 }
 
 .font-serif {
-  font-family: Volkhov, "Times New Roman", sans-serif;
+  font-family: Volkhov, "Fahkwang", sans-serif;
   font-style: italic;
 }
 
@@ -1196,7 +1196,7 @@ General Styles - Owlcarousel
   border: 0;
   border-radius: 0;
   z-index: 1000;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Fahkwang", sans-serif;
   text-transform: none;
   letter-spacing: 3px;
   font-size: 11px;
@@ -1637,27 +1637,6 @@ Google map
   -webkit-transform: translateY(50%);
   -ms-transform: translateY(50%);
   transform: translateY(50%);
-}
-
-/*--------------------------------------------------------------
-	Restaurant Menu
---------------------------------------------------------------*/
-.menu {
-  border-bottom: 1px dotted #e5e5e5;
-  padding: 0 0 10px;
-  margin: 0 0 20px;
-}
-
-.menu-title,
-.menu-price {
-  margin: 0 0 10px;
-  font-size: 14px;
-  color: #111;
-}
-
-.menu-price-detail {
-  position: relative;
-  text-align: right;
 }
 
 /*--------------------------------------------------------------
