@@ -20,7 +20,6 @@
               <div class="row">
                 <div class="col-sm-12">
                   <ul class="filter font-alt" id="filters">
-                    <li><a class="current wow fadeInUp" href="#" data-filter="*">Industrial</a></li>
                     <li><a class="wow fadeInUp" href="#" data-filter=".illustration" data-wow-delay="0.2s">Know Us</a></li>
                     <li><a class="wow fadeInUp" href="#" data-filter=".marketing" data-wow-delay="0.4s">Services</a></li>
                     <li><a class="wow fadeInUp" href="#" data-filter=".photography" data-wow-delay="0.6s">Web Apps</a></li>
@@ -30,7 +29,7 @@
               </div>
               <ul class="works-grid works-grid-masonry works-grid-3 works-hover-d" id="works-grid">
                 <li class="work-item illustration webdesign"><a href="{% static 'images/glass1.jpg' %}">
-                    <div class="work-image"><img src="{% static 'images/glass1.jpg' %}" alt="Portfolio Item"/></div>
+                    <div class="work-image"><img src="{% static 'images/profile1.jpg' %}" alt="Portfolio Item"/></div>
                     <div class="work-caption font-alt">
                       <h3 class="work-title">Know Us</h3>
                       <div class="work-descr">Why We Do What We Do</div>
@@ -44,26 +43,6 @@
                   </ul>
                 </div>
           </section>
-          <section class="container">
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="row multi-columns-row post-columns">
-                    <div class="post">
-                      <div class="post-header font-alt">
-                          <div class="media-body">
-                              <div class="article-metadata">
-                                <h2 class="post-title"><a href="{% url 'posts:post-detail' post.id %}">{{ post.title }}</a></h2>
-                                <div class="post-meta"> <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}"> By&nbsp;<a href="#">{{post.author}}</a>&nbsp;| {{ post.date_posted }}
-                              </div>
-                            </div>
-                          <div class="article-content"><h5>{{ post.content|truncatewords:50|safe }}</h5>
-                      </div>
-                      <div class="post-more"><a class="more-link" href="{% url 'posts:post-detail' post.id %}">Read more</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
     {% endfor %}
 
    {% if is_paginated %}
