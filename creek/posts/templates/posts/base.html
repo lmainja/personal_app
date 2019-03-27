@@ -59,7 +59,7 @@
             <ul class="nav navbar-nav navbar-right">
               <br/>
             </br>
-              <li class="dropdown"><a href="{% url 'posts:about' %}">Home</a>
+              <li class="dropdown"><a href="{% url 'posts:home' %}">Home</a>
               </li>
               <li class="dropdown"><a href="{% url 'posts:services' %}">Services</a>
                 <ul class="dropdown-menu">
@@ -69,40 +69,24 @@
                       <li><a href="#">Mobile Apps</a></li>
                     </ul>
                   </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Graphic Design</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Interface</a></li>
-                      <li><a href="#">Advertising</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">SEM</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">SEO</a></li>
-                      <li><a href="#">E-Marketing</a></li>
-                    </ul>
-                  </li>
                   <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Data Solutions</a>
                     <ul class="dropdown-menu">
                       <li><a href="#">Management</a></li>
                       <li><a href="#">Analysis</a></li>
                     </ul>
                   </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Security</a>
+                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Creative Design</a>
                     <ul class="dropdown-menu">
-                      <li><a href="#">Risk</a></li>
-                      <li><a href="#">App Security</a></li>
+                      <li><a href="#">Graphic</a></li>
                     </ul>
                   </li>
                 </ul>
-              <li class="dropdown"><a href="{% url 'posts:coming' %}">Portfolio</a>
-              <li class="dropdown"><a href="{% url 'posts:pricing' %}">Pricing</a>
               <li class="dropdown"><a href="{% url 'posts:about' %}">Who We Are</a>
                 <ul class="dropdown-menu">
                   <li><a href="{% url 'posts:team' %}">Team</a></li>
-                  <li><a href="{% url 'posts:careers' %}">Careers</a></li>
                 </ul>
               </li>
-              <li class="dropdown"><button class="btn btn-danger btn-circle"><a href="#">Contact Us</a></button>
+              <li class="dropdown"><button class="btn btn-danger btn-circle"><a href="{% url 'posts:careers' %}">Get in Touch</a></button>
               <li class="collapse navbar-collapse" id="navbarCollapse">
       </div>
     </ul>
@@ -123,7 +107,7 @@
         <div class="module-small bg-dark"> 
           <div class="container">
             <div class="row">
-              <div class="col-sm-9">
+              <div class="col-sm-12">
                 <div class="widget">
                   <h5 class="widget-title font-alt">About The BL Project</h5>
                   <p>We create innovative, responsive and highly scalable applications. We also work to improve and enhance security of your applications and data. Our graphic design team work around the clock to create innovative design that satisfy out customers. We simplify technology, so you don't have to worry about IT complexities.</p>

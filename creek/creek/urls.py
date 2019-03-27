@@ -15,7 +15,7 @@ urlpatterns = [
     path('profile/', users_views.profile, name='profile'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logged_out.html'), name='logout'),
-    #path('accounts/', include('allauth.urls')),
+    #path('contact/', contact_views, name='contactus'),
     path('users/', include('users.urls')),
     path('', include('posts.urls')),
     path('tinymce/', include('tinymce.urls')),

@@ -10,7 +10,7 @@ html {
 body {
   background: #fff;
   font: 400 20px/1.8 "Fahkwang", sans-serif;
-  color: #666;
+  color: rgb(209, 199, 199);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -1323,7 +1323,7 @@ General Styles - Owlcarousel
 --------------------------------------------------------------*/
 .home-section {
   position: relative;
-  background-color: rgba(56, 70, 63, 0.322);
+  background-color: rgb(249, 255, 252);
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
@@ -1376,7 +1376,7 @@ General Styles - Owlcarousel
 }
 
 .pricing-page-header:before {
-  background: rgba(2, 2, 2, 0.6);
+  background: rgba(255, 253, 253, 0.6);
 }
 
 /* Gallery Page Header */
@@ -1433,7 +1433,7 @@ General Styles - Owlcarousel
 }
 
 .portfolio-page-header:before {
-  background: rgba(45, 45, 45, 0.45);
+  background: rgba(250, 246, 246, 0.979);
 }
 
 /* Landing Page Header */
