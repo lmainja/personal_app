@@ -1,10 +1,9 @@
 {% extends "posts/base.html" %}
 {% load static %}
 {% block content %}
- {% for post in posts %}
  <style>
   .hero {
-    background: rgb(224, 210, 210) url("{% static 'images/code1.jpg' %}") center / cover;
+    background: rgb(224, 210, 210) url("{% static 'images/homepage.jpg' %}") center / cover;
   }
   
   @media (max-width: 1024px) { .hero { background: white url("{% static 'images/hero-2.jpg' %}") center / cover; } }
@@ -35,7 +34,7 @@
                       <div class="work-descr">Why We Do What We Do</div>
                     </div></a></li>
                 <li class="work-item marketing photography"><a href="portfolio_single_featured_image2.html">
-                    <div class="work-image"><img src="{% static 'images/glass2.jpg' %}" alt="Portfolio Item"/></div>
+                    <div class="work-image"><img src="{% static 'images/code1.jpg' %}" alt="Portfolio Item"/></div>
                     <div class="work-caption font-alt">
                       <h3 class="work-title">Services</h3>
                       <div class="work-descr">Full App Development and Security</div>
@@ -43,8 +42,6 @@
                   </ul>
                 </div>
           </section>
-    {% endfor %}
-
    {% if is_paginated %}
 
   {% if page_obj.has_previous %}
