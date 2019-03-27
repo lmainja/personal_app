@@ -42,12 +42,12 @@
 			</figure>
 		</div>
 		<div class="column center desktop">
-      <ul class="navbar-item has-text-black"><a href ="{% url 'bluecrane:home' %}">Home</a>
-      <ul class="navbar-item has-text-black"><a href ="{% url 'bluecrane:services' %}">Services</a>
-      <ul class="navbar-item has-text-black"><a href ="{% url 'bluecrane:services' %}">About BLP</a> 
+      <ul class="navbar-item has-text-black"><a href ="{% url 'posts:home' %}">Home</a>
+      <ul class="navbar-item has-text-black"><a href ="{% url 'posts:services' %}">Services</a>
+      <ul class="navbar-item has-text-black"><a href ="{% url 'posts:about' %}">About BLP</a> 
 		</div>
 		<div class="column right">
-      <ul class="navbar-item has-text-black desktop"><a href ="{% url 'register' %}">Get In Touch</a>
+      <ul class="navbar-item has-text-black desktop"><a href ="{% url 'posts:careers' %}">Get In Touch</a>
 
 			<figure class="navbar-item image has-text-black center">
 				<i class="fas fa-bars" style="width: 1rem; height: 1rem;"></i>
@@ -67,7 +67,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6">
-                <p class="copyright font-alt">&copy; 2019&nbsp;<a href="index.html">TheBLProject</a>, All Rights Reserved</p>
+                <p class="copyright font-alt">&copy; 2019&nbsp;<a href="{% url 'posts:about' %}">TheBLProject</a>, All Rights Reserved</p>
               </div>
               <div class="col-sm-6">
                 <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>
