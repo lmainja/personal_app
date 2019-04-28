@@ -1,18 +1,20 @@
 {% extends "posts/base.html" %}
 {% load static %}
 {% block content %}
- <style>
-  .hero {
-    background: rgb(224, 210, 210) url("{% static 'images/homepage.jpg' %}") center / cover;
-  }
-  
-  @media (max-width: 1024px) { .hero { background: white url("{% static 'images/hero-2.jpg' %}") center / cover; } }
-  @media (max-width:  768px) { .hero { background: white url("{% static 'images/hero-3.jpg' %}") center / cover; } }
-  
-      </style>
-    </head>
-    <body>
-  
+<section class="home-section bg-dark-30" id="home" data-background="{% static 'images/homepage.jpg' %}">
+  <div class="video-player" data-property="{videoURL:'https://www.youtube.com/watch?v=VrMo5RWEXdY', containment:'.home-section', startAt:30, mute:false, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:25}"></div>
+  <div class="video-controls-box">
+    <div class="container">
+      <div class="video-controls"><a class="fa fa-volume-up" id="video-volume" href="#">&nbsp;</a><a class="fa fa-pause" id="video-play" href="#">&nbsp;</a></div>
+    </div>
+  </div>
+  <div class="titan-caption">
+    <div class="caption-content">
+      <div class="font-alt mb-30 titan-title-size-1">Welcome to The BL Project</div>
+      <div class="font-alt mb-40 titan-title-size-3">A Web and Mobile Application Dev Platform</div><a class="section-scroll btn btn-border-w btn-round" href="{% url 'posts:services' %}">Learn More</a>
+    </div>
+  </div>
+</section>
    <div class="main">
           <section class="module" id="portfolio">
             <div class="container">
@@ -48,6 +50,47 @@
                   </ul>
                 </div>
           </section>
+          <hr class="divider-w">
+        <section class="module bg-dark-60" data-background="#image">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                <h2 class="module-title font-alt">Analytics</h2>
+                <div class="module-subtitle font-serif"></div>
+              </div>
+            </div>
+            <div class="row multi-columns-row">
+              <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="count-item mb-sm-40">
+                  <div class="count-icon"><span class="icon-wallet"></span></div>
+                  <h3 class="count-to font-alt" data-countto="6"></h3>
+                  <h5 class="count-title font-serif">ELK Stack</h5>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="count-item mb-sm-40">
+                  <div class="count-icon"><span class="icon-wine"></span></div>
+                  <h3 class="count-to font-alt" data-countto="4"></h3>
+                  <h5 class="count-title font-serif">Web Apps</h5>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="count-item mb-sm-40">
+                  <div class="count-icon"><span class="icon-camera"></span></div>
+                  <h3 class="count-to font-alt" data-countto="30"></h3>
+                  <h5 class="count-title font-serif">Data Security</h5>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="count-item mb-sm-40">
+                  <div class="count-icon"><span class="icon-map-pin"></span></div>
+                  <h3 class="count-to font-alt" data-countto="5"></h3>
+                  <h5 class="count-title font-serif">All Things Python</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
    {% if is_paginated %}
 
   {% if page_obj.has_previous %}
