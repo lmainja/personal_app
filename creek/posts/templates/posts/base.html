@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-    <link rel="stylesheet" href="{% static 'normalize.css' %}">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>The BL Project</title>
@@ -45,10 +44,11 @@
 		<div class="column center desktop">
       <ul class="navbar-item has-text-black"><a href ="{% url 'posts:home' %}">Home</a>
       <ul class="navbar-item has-text-black"><a href ="{% url 'posts:services' %}">Services</a>
+      <ul class="navbar-item has-text-black"><a href ="#">Blog</a>
       <ul class="navbar-item has-text-black"><a href ="{% url 'posts:about' %}">About BLP</a> 
 		</div>
 		<div class="column right">
-      <ul class="navbar-item has-text-black desktop"><a href ="{% url 'posts:careers' %}">Get In Touch</a>
+      <ul class="navbar-item has-text-black desktop"><a href ="{% url 'register' %}">Get In Touch</a>
 
 			<figure class="navbar-item image has-text-black center">
 				<i class="fas fa-bars" style="width: 1rem; height: 1rem;"></i>

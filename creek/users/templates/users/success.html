@@ -1,0 +1,21 @@
+{% extends 'posts/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<section class="home-section home-full-height" id="home">
+    <div class="hero-slider">
+      <ul class="slides">
+        <li class="bg-dark-30 restaurant-page-header bg-dark" style="background-image:url(&quot;{% static 'images/success.jpg' %}&quot;);">
+          <div class="titan-caption">
+            <div class="caption-content">
+              <div class="font-alt mb-30 titan-title-size-1"> Thank You</div>
+              <div class="font-alt mb-40 titan-title-size-4">Our team will get back to you soon</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+      
+{% endblock %}
+        
