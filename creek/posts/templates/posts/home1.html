@@ -21,27 +21,27 @@
               <div class="row">
                 <div class="col-sm-12">
                   <ul class="filter font-alt" id="filters">
-                    <li><a class="wow fadeInUp" href="#" data-filter=".illustration" data-wow-delay="0.2s">Know Us</a></li>
-                    <li><a class="wow fadeInUp" href="#" data-filter=".marketing" data-wow-delay="0.4s">Services</a></li>
+                    <li><a class="wow fadeInUp" href="{% url 'posts:about' %}" data-filter=".illustration" data-wow-delay="0.2s">Know Us</a></li>
+                    <li><a class="wow fadeInUp" href="{% url 'posts:services' %}" data-filter=".marketing" data-wow-delay="0.4s">Services</a></li>
                     <li><a class="wow fadeInUp" href="#" data-filter=".photography" data-wow-delay="0.6s">Web Apps</a></li>
                     <li><a class="wow fadeInUp" href="#" data-filter=".webdesign" data-wow-delay="0.6s">Data Solutions</a></li>
                   </ul>
                 </div>
               </div>
               <ul class="works-grid works-grid-masonry works-grid-3 works-hover-d" id="works-grid">
-                <li class="work-item illustration webdesign"><a href="{% static 'images/glass1.jpg' %}">
+                <li class="work-item illustration webdesign"><a href="{% url 'posts:about' %}">
                     <div class="work-image"><img src="{% static 'images/profile1.jpg' %}" alt="Portfolio Item"/></div>
                     <div class="work-caption font-alt">
                       <h3 class="work-title">Know Us</h3>
                       <div class="work-descr">Why We Do What We Do</div>
                     </div></a></li>
-                <li class="work-item marketing photography"><a href="portfolio_single_featured_image2.html">
+                <li class="work-item marketing photography"><a href="{% url 'posts:services' %}">
                     <div class="work-image"><img src="{% static 'images/code1.jpg' %}" alt="Portfolio Item"/></div>
                     <div class="work-caption font-alt">
                       <h3 class="work-title">Services</h3>
                       <div class="work-descr">Full App Development and Security</div>
                     </div></a></li>
-                <li class="work-item illustration photography"><a href="portfolio_single_featured_slider1.html">
+                <li class="work-item illustration photography"><a href="#">
                     <div class="work-image"><img src="{% static 'images/apps.jpg' %}" alt="Portfolio Item"/></div>
                     <div class="work-caption font-alt">
                       <h3 class="work-title">Applications</h3>
