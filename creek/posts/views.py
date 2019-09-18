@@ -8,25 +8,25 @@ def home(request):
     context = {
         'posts': Post.objects.all()
     }
-    return render(request, 'posts/home1.html', context)
+    return render(request, 'posts/base.html', context)
 
 def about(request):
-    return render(request, 'posts/about1.html', {'title': 'About'})
+    return render(request, 'posts/about.html', {'title': 'About'})
 
 def careers(request):
-    return render(request, 'posts/careers.html')
+    return render(request, 'posts/career.html')
 
 def coming_soon(request):
-    return render(request, 'posts/coming_soon.html')
+    return render(request, 'posts/portfolio-item.html')
 
 def team(request):
-    return render(request, 'posts/our_team.html')
+    return render(request, 'posts/team.html')
 
 def pricing(request):
     return render(request, 'posts/pricing.html')
 
 def services(request):
-    return render(request, 'posts/services.html')
+    return render(request, 'posts/service.html')
 
 class PostDetailView(DetailView):
     model = Post
@@ -35,7 +35,7 @@ class PostDetailView(DetailView):
 
 class PostListView(ListView):
     model = Post
-    template_name = 'posts/home1.html'  # <app>/<model>_<viewtype>.html
+    template_name = 'posts/base.html'  # <app>/<model>_<viewtype>.html
     context_object_name = 'posts'
     ordering = ['-date_posted']
     paginate_by = 5
