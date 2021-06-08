@@ -16,7 +16,7 @@ gunicorn==19.9.0
 idna==2.7
 ipaddress==1.0.22
 oauthlib==2.1.0
-Pillow==5.2.0
+Pillow==8.2.0
 psycopg2==2.7.5
 python-dateutil==2.7.3
 python-decouple==3.1
